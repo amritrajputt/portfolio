@@ -1,11 +1,21 @@
-import AboutLanding from "@/components/about-landing";
+import AboutLanding from "@/components/landing/about-landing";
+import Experience from "@/components/landing/experience";
+import Footer from "@/components/landing/footer";
+import HomeProjects from "@/components/landing/home-project";
+import { gabarito } from "@/public/font";
+import GhActivityCard from "gh-activity-card/components/gh-activity-card";
 
-// import GhActivityCard from "gh-activity-card/components/gh-activity-card";
 export default function Home() {
   return (
-    <div className=" max-w-5xl mx-auto mt-12">
+    <div className="mx-auto mt-12 flex flex-col gap-24">
       <AboutLanding />
-      {/* <GhActivityCard username="kashyap1ankit" /> */}
+      <Experience />
+      <HomeProjects />
+      <div className="flex flex-col gap-6">
+        <p className={`${gabarito.className} text-2xl`}>Github Contribution</p>
+        <GhActivityCard username="kashyap1ankit" />
+      </div>
+      <Footer />
     </div>
   );
 }

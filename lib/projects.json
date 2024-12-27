@@ -1,0 +1,14 @@
+[
+  {
+    "name": "JobJunction",
+    "description": "Job portal where user can see job postings & can also post one for community if they know.",
+    "deployed": "jj.10xdevlab.in",
+    "github": "https://github.com/Kashyap1ankit/Jobjunction"
+  },
+  {
+    "name": "Logofy",
+    "description": "Helps to generate professional logos for their company. Describe in few words what you want in the logo and get it as svg",
+    "deployed": "logofy.10xdevlab.in",
+    "github": "/github-not-found"
+  }
+]

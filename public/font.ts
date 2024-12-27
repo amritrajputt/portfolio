@@ -1,6 +1,6 @@
 import { Cousine, Gabarito } from "next/font/google";
 
-export const test = Gabarito({
+export const gabarito = Gabarito({
   weight: "500",
   subsets: ["latin"],
 });
