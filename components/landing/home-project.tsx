@@ -1,42 +1,54 @@
 "use client";
 import { cousine, gabarito } from "@/public/font";
 import projectsData from "@/lib/projects.json";
-import { PiProjectorScreen } from "react-icons/pi";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface dataType {
   name: string;
   description: string;
   deployed: string;
   github: string;
+  tech: string[];
+  image: string;
 }
 
 export default function HomeProjects() {
   const router = useRouter();
   return (
     <div id="projects">
-      <p className={`${gabarito.className} text-2xl`}>Projects</p>
+      <p
+        className={`${gabarito.className} text-2xl text-black dark:text-white`}
+      >
+        Projects
+      </p>
 
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2   gap-6">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2   gap-6">
         {projectsData.map((e: dataType, i: number) => {
           return (
             <div
               key={i}
-              className="p-4 rounded-md border border-neutral-900 cursor-pointer hover:border-neutral-800 hover:shadow-sm hover:shadow-fuchsia-950 duration-300 flex flex-col gap-6 group"
+              className="p-4 rounded-md border hover:border-blue-200 dark:border-neutral-900 cursor-pointer dark:hover:border-neutral-800 dark:hover:shadow-sm dark:hover:shadow-fuchsia-950 duration-300 flex flex-col gap-6 group"
             >
-              <div className="flex justify-between ">
-                <PiProjectorScreen />
+              <div className="flex justify-between items-center">
+                <Image
+                  src={e.image}
+                  width={500}
+                  height={500}
+                  alt="logo"
+                  className="w-12 rounded-full "
+                />
                 <Link href={e.github} className="hover:text-gray-400">
-                  <FaGithub className="size-6" />
+                  <FaGithub className="size-6 text-black dark:text-white" />
                 </Link>
               </div>
 
               <div>
                 <p
-                  className={`${gabarito.className} text-xl font-bold font-bold`}
+                  className={`${gabarito.className} text-xl font-bold font-bold text-black dark:text-white`}
                 >
                   {e.name}
                 </p>
@@ -57,13 +69,26 @@ export default function HomeProjects() {
 
                 <BsArrowUpRight />
               </Link>
+
+              <div className="flex gap-2 flex-wrap">
+                {e.tech.map((e: string, i: number) => {
+                  return (
+                    <p
+                      key={i}
+                      className="border dark:border-neutral-800 rounded-lg p-2 w-fit text-gray-400 text-xs bg-slate-200 dark:bg-transparent"
+                    >
+                      {e}
+                    </p>
+                  );
+                })}
+              </div>
             </div>
           );
         })}
       </div>
 
       <div
-        className="border border-neutral-900 hover:border-neutral-800 mt-6 text-center p-2 rounded-lg cursor-pointer duration-300 w-full hover:bg-gray-950 text-gray-400"
+        className="border dark:border-neutral-900  dark:hover:border-neutral-800 mt-6 text-center p-2 rounded-lg cursor-pointer duration-300 w-full hover:bg-slate-200 dark:hover:bg-gray-950 text-gray-400"
         onClick={() => router.push("/projects")}
       >
         See more

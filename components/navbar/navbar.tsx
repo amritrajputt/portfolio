@@ -20,7 +20,7 @@ export default function Navbar() {
             <Link
               href={e.link}
               key={i}
-              className="hover:text-blue-500 cursor-pointer duration-500"
+              className="hover:text-blue-500 cursor-pointer duration-500 "
             >
               {e.name}
             </Link>
@@ -30,7 +30,7 @@ export default function Navbar() {
 
       <Link
         href={"https://github.com/Kashyap1ankit"}
-        className="hover:text-sky-700"
+        className="hover:text-sky-700 invert dark:invert-0"
       >
         <FaGithub className="size-6" />
       </Link>

@@ -12,8 +12,15 @@ export default function Home() {
       <Experience />
       <HomeProjects />
       <div className="flex flex-col gap-6">
-        <p className={`${gabarito.className} text-2xl`}>Github Contribution</p>
-        <GhActivityCard username="kashyap1ankit" />
+        <p
+          className={`${gabarito.className} text-2xl text-black dark:text-white`}
+        >
+          Github Contribution
+        </p>
+        <GhActivityCard
+          username="kashyap1ankit"
+          className="text-black dark:text-white"
+        />
       </div>
       <Footer />
     </div>

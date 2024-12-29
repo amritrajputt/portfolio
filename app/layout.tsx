@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import { ReactLenis } from "lenis/react";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,10 +29,17 @@ export default function RootLayout({
     <html lang="en">
       <ReactLenis root>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased w-11/12 w-4xl max-w-4xl mx-auto bg-black text-white`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased w-11/12 w-4xl max-w-4xl mx-auto bg-white dark:bg-black text-white`}
         >
-          <Navbar />
-          <div className=" mt-32">{children}</div>
+          <ThemeProvider
+            attribute={"class"}
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            <div className=" mt-32">{children}</div>
+          </ThemeProvider>
         </body>
       </ReactLenis>
     </html>
