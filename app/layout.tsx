@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import { ReactLenis } from "lenis/react";
 import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/landing/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
           >
             <Navbar />
             <div className=" mt-32">{children}</div>
+            <Footer />
           </ThemeProvider>
         </body>
       </ReactLenis>

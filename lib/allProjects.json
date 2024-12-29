@@ -1,0 +1,96 @@
+[
+  {
+    "name": "JobJunction",
+    "description": "Job portal where user can see job postings & can also post one for community if they know.",
+    "deployed": "jj.10xdevlab.in",
+    "github": "https://github.com/Kashyap1ankit/Jobjunction",
+    "tech": [
+      "Next.js",
+      "Typescript",
+      "Tailwind",
+      "Postgresql",
+      "Authjs",
+      "Framer-Motion",
+      "More..."
+    ],
+    "image": "https://res.cloudinary.com/ddnkrlfjn/image/upload/v1735482675/jj-logo_jyvy4x.png"
+  },
+  {
+    "name": "Logofy",
+    "description": "Helps to generate professional logos for their company. Describe in few words what you want in the logo and get it as svg",
+    "deployed": "logofy.10xdevlab.in",
+    "github": "/github-not-found",
+    "tech": [
+      "Next.js",
+      "Typescript",
+      "Tailwind",
+      "Postgresql",
+      "Framer-Motion",
+      "Replicate Api",
+      "More..."
+    ],
+    "image": "https://res.cloudinary.com/ddnkrlfjn/image/upload/v1735482702/logofy_jk56al.svg"
+  },
+  {
+    "name": "Techtalkies",
+    "description": "Platform where user can come & write blogs. If user don't know what to write then they can use Ai to write blogs by giving topic name",
+    "deployed": "techtalkies.10xdevlab.in",
+    "github": "https://github.com/Kashyap1ankit/Techtalkies",
+    "tech": [
+      "React.js",
+      "Typescript",
+      "Tailwind",
+      "Postgresql",
+      "Honojs",
+      "More..."
+    ],
+    "image": "https://res.cloudinary.com/ddnkrlfjn/image/upload/v1735489606/pexels-photo-993020_wrn7ou.jpg"
+  },
+  {
+    "name": "Gh-Activity-Card",
+    "description": "Npm package that helps developers to showcase their Github contribution in last 1 year. Developed backend for this & integrated frontend",
+    "deployed": "npmjs.com/package/gh-activity-card",
+    "github": "https://github.com/Kashyap1ankit/gh-activity-card",
+    "tech": [
+      "Next.js",
+      "Typescript",
+      "Tailwind",
+      "Nodejs",
+      "Express js",
+      "More..."
+    ],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4qY3zhR-L_urH_bkiZsRSqKE12F6MRwmqHA&s"
+  },
+  {
+    "name": "PayUsVia",
+    "description": "Platform where user signup and they can do transactions with the existing user on website.",
+    "deployed": "paytm-frontend-ankits-projects-5c12be11.vercel.app",
+    "github": "https://github.com/Kashyap1ankit/paytm-frontend",
+    "tech": [
+      "React.js",
+      "Tailwind",
+      "Nodejs",
+      "Express js",
+      "MongoDB",
+      "JWT",
+      "More..."
+    ],
+    "image": "https://res.cloudinary.com/ddnkrlfjn/image/upload/v1735489606/pexels-photo-993020_wrn7ou.jpg"
+  },
+  {
+    "name": "Airbnb Clone",
+    "description": "A hotel booking wesbite similar to airbnb. User can signup and see the listings and also see & give reviews on experience",
+    "deployed": null,
+    "github": "https://github.com/Kashyap1ankit/Airbnb",
+    "tech": [
+      "Express js",
+      "Css",
+      "Nodejs",
+      "Ejs",
+      "MongoDB",
+      "Passport.js",
+      "More..."
+    ],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBheFWGH5E1B5B-vdhAOaN7e6HXesAzN-ukA&s"
+  }
+]

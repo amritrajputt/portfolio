@@ -1,6 +1,5 @@
 import AboutLanding from "@/components/landing/about-landing";
 import Experience from "@/components/landing/experience";
-import Footer from "@/components/landing/footer";
 import HomeProjects from "@/components/landing/home-project";
 import { gabarito } from "@/public/font";
 import GhActivityCard from "gh-activity-card/components/gh-activity-card";
@@ -22,7 +21,6 @@ export default function Home() {
           className="text-black dark:text-white"
         />
       </div>
-      <Footer />
     </div>
   );
 }

@@ -40,7 +40,7 @@ export default function Footer() {
   }, [setTheme]);
 
   return (
-    <div className="mb-12 flex justify-between">
+    <div className="mt-24 mb-12 flex justify-between">
       <div className="flex gap-4 ">
         {socials.map((e, i: number) => {
           return (

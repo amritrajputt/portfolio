@@ -6,13 +6,15 @@ import navLinks from "@/lib/navlinks.json";
 export default function Navbar() {
   return (
     <div className="flex justify-between items-center  fixed top-4 left-1/2 -translate-x-1/2  w-11/12 md:w-1/2 ">
-      <Image
-        src={"/x.png"}
-        width={500}
-        height={500}
-        className="w-10  rounded-full border border-neutral-900"
-        alt="my-img"
-      />
+      <Link href={"/"}>
+        <Image
+          src={"/x.png"}
+          width={500}
+          height={500}
+          className="w-10  rounded-full border border-neutral-900"
+          alt="my-img"
+        />
+      </Link>
 
       <div className="flex gap-6 border border-neutral-700 px-4 py-2 rounded-full text-sm bg-black">
         {navLinks.map((e, i: number) => {
