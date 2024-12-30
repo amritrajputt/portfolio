@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import navLinks from "@/lib/navlinks.json";
+import { cousine } from "@/public/font";
 
 export default function Navbar() {
   return (
@@ -22,7 +23,7 @@ export default function Navbar() {
             <Link
               href={e.link}
               key={i}
-              className="hover:text-blue-500 cursor-pointer duration-500 "
+              className={`${cousine.className} hover:text-blue-500 cursor-pointer duration-500 `}
             >
               {e.name}
             </Link>

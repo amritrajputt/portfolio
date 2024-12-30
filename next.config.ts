@@ -11,6 +11,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "encrypted-tbn0.gstatic.com",
       },
+      {
+        protocol: "https",
+        hostname: "appx-wsb-gcp-mcdn.akamai.net.in",
+      },
+      {
+        protocol: "https",
+        hostname: "sanityesports.vercel.app",
+      },
     ],
   },
 };

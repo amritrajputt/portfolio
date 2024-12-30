@@ -4,12 +4,14 @@ import HomeProjects from "@/components/landing/home-project";
 import { gabarito } from "@/public/font";
 import GhActivityCard from "gh-activity-card/components/gh-activity-card";
 import Footer from "@/components/landing/footer";
+import Skills from "@/components/landing/skiils";
 
 export default function Home() {
   return (
     <>
       <div className="mx-auto mt-12 flex flex-col gap-24">
         <AboutLanding />
+        <Skills />
         <Experience />
         <HomeProjects />
         <div className="flex flex-col gap-6">
