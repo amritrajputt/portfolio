@@ -13,20 +13,13 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #F6F5FE;
   --foreground: #000000;
 }
 
 .dark {
   --background: #000000;
   --foreground: #ededed;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #00000000;
-    --foreground: #ededed;
-  }
 }
 
 body {

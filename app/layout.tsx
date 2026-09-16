@@ -6,9 +6,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Ankit Kashyap",
-  description: "Ankit Kashyap Portfolio",
-  icons: "/x.webp",
+  title: "Amrit Raj",
+  description: "Amrit Raj - Full Stack Developer Portfolio",
+  icons: "/amrit.jpg",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <ReactLenis root>
         <body
-          className={` antialiased w-11/12 w-4xl max-w-4xl mx-auto bg-[#F6F5FE] dark:bg-[#000000] text-white border-x  dark:border-zinc-900`}
+          className={`antialiased w-11/12 max-w-4xl mx-auto bg-[#F6F5FE] dark:bg-[#000000] text-black dark:text-white border-x border-neutral-200 dark:border-zinc-900 min-h-screen`}
         >
           <ThemeProvider
             attribute={"class"}
