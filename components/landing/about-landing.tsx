@@ -3,7 +3,7 @@
 import { gabarito, hanken, manrope } from "@/public/font";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import {
   IconArrowBadgeRight,
   IconCalendarWeek,
@@ -13,37 +13,14 @@ import {
   IconMusicOff,
 } from "@tabler/icons-react";
 import { ThemeToggleButton } from "../theme";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { socialsData } from "@/lib/constant";
 import { useActiveAudio } from "@/store/store";
 
 export default function AboutLanding() {
   const { isPlaying, setIsPlaying } = useActiveAudio();
   const audioRef = useRef(null);
 
-  useEffect(() => {
-    // Load Twitter script on client
-    const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
-  const socials = [
-    {
-      link: "https://x.com/kashyap_tweetts",
-      icon: FaXTwitter,
-    },
-    {
-      link: "https://github.com/Kashyap1ankit/",
-      icon: FaGithub,
-    },
-
-    {
-      link: "https://www.linkedin.com/in/ankit-kashyap-coder/",
-      icon: FaLinkedinIn,
-    },
-  ];
+  const socials = socialsData;
 
   function handleAudioPlayPause() {
     if (!audioRef) return;
@@ -60,8 +37,7 @@ export default function AboutLanding() {
   return (
     <div className="flex flex-col gap-6 px-4" id="about">
       <Link
-        href={"https://cal.com/kashyap-ankit"}
-        target="_blank"
+        href={"mailto:amritrajsingh179@gmail.com?subject=Work Enquiry"}
         className=" duration-500 flex gap-x-2 items-center  w-fit  p-2 rounded-full bg-black dark:bg-white/90 shadow-[inset_0_-4px_6px_rgba(255,255,255,0.5)] dark:shadow-[inset_0_-4px_6px_rgba(0,0,0,0.45)] group active:scale-75"
       >
         <IconCalendarWeek size={16} className="text-white dark:text-black" />
@@ -90,13 +66,13 @@ export default function AboutLanding() {
               aria-label="me"
               width={500}
               height={500}
-              src={"/x.webp"}
-              className="size-12 rounded-md ring-2 ring-white/90 shadow-md shadow-black dark:shadow-white/70 -rotate-6"
+              src={"/amrit.jpg"}
+              className="size-12 sm:size-14 rounded-md ring-2 ring-white/90 shadow-md shadow-black dark:shadow-white/70 -rotate-6 object-cover"
             />
             <p
               className={`text-2xl sm:text-3xl md:text-4xl ${gabarito.className} font-bold bg-gradient-to-r from-blue-400 to-lightBlue text-transparent bg-clip-text`}
             >
-              Ankit Kashyap
+              Amrit Raj
             </p>
           </div>
         </div>
@@ -124,35 +100,32 @@ export default function AboutLanding() {
       <p
         className={`${hanken.className} text-sm text-gray-500 dark:text-gray-400`}
       >
-        I&apos;m a Full Stack Web Developer and Open Source Contributor with
-        expertise in building scalable applications using Next.js, NoSql/Sql,
-        and Tailwind CSS. Skilled in translating pixel-perfect Figma designs
-        into responsive web pages. I bring a solution-driven approach to
-        crafting impactful digital products.
+        I&apos;m a Full Stack Web Developer with expertise in building scalable
+        applications using Next.js, Node.js, PostgreSQL, and Redis. Experienced
+        in AI/ML integration with LangChain and RAG pipelines, real-time systems
+        with WebSockets, and implementing secure authentication protocols
+        including OIDC and JWT.
       </p>
 
       <div className="flex flex-row flex-wrap justify-between items-center gap-y-6">
         <div className="flex flex-wrap gap-6">
           <Link
-            href={"mailto:kashyap25ankit@gmail.com?subject=Work Enquiry"}
+            href={"mailto:amritrajsingh179@gmail.com?subject=Work Enquiry"}
             className="flex gap-2  px-4 items-center bg-lightBlue dark:bg-darkBlue text-white dark:text-lightBlue  p-2 w-fit text-sm rounded-lg inset-shadow-sm inset-shadow-white/50  dark:inset-shadow-white/20 "
           >
             <IconHeartHandshake stroke={1} size={18} />
             <p className={`${hanken.className} font-bold`}>Work with me </p>
           </Link>
 
-          <Link
-            href={
-              "https://drive.google.com/file/d/1ekhmrVbdR95EXcP2B4PxksDN50dF-WYZ/view?usp=sharing"
-            }
-            className="flex gap-2  px-4 items-center  p-2 w-fit bg-lightBlue dark:bg-darkBlue text-white dark:text-lightBlue text-sm rounded-lg inset-shadow-sm inset-shadow-white/50  dark:inset-shadow-white/20 "
+          <a
+            href="/resume.pdf"
+            className="flex gap-2 px-4 items-center p-2 w-fit bg-lightBlue dark:bg-darkBlue text-white dark:text-lightBlue text-sm rounded-lg inset-shadow-sm inset-shadow-white/50 dark:inset-shadow-white/20 hover:opacity-90 transition-opacity cursor-pointer"
             target="_blank"
-            rel="noopener noreferre"
-            download
+            rel="noopener noreferrer"
           >
             <IconLicense stroke={1} size={18} />
             <p className={`${hanken.className} font-bold`}>Resume</p>
-          </Link>
+          </a>
         </div>
 
         <div className="flex gap-4 items-center ">
