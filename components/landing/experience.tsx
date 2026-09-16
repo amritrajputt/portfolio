@@ -9,14 +9,14 @@ import { experienceData } from "@/lib/constant";
 
 interface dataType {
   company: string;
-  about: string[];
+  description: string;
   role: string;
   timeframe: string;
-  image: string;
+  tech?: string[];
 }
 
 export default function Experience() {
-  const [openedIndex, setOpenedIndex] = useState<number | null>(null);
+  const [openedIndex, setOpenedIndex] = useState<number | null>(0);
 
   const toggleIndex = (index: number) => {
     setOpenedIndex((prev) => (prev === index ? null : index));
@@ -30,40 +30,39 @@ export default function Experience() {
         Experience
       </p>
 
-      <div className=" flex flex-col items-start justify-start gap-6 sm:gap-8 md:gap-12  w-full">
+      <div className="flex flex-col items-start justify-start gap-6 sm:gap-8 md:gap-12 w-full">
         {experienceData.map((e: dataType, i: number) => {
           const isOpen = openedIndex === i;
 
           return (
             <div
-              className="flex flex-row items-start gap-x-2 px-4 w-full"
+              className="flex flex-row items-start gap-x-3 px-4 w-full"
               key={i}
             >
               <div>
                 <IconBriefcase
                   size={36}
-                  className="border border-neutral-200 dark:border-neutral-800 p-2 rounded-lg text-black dark:text-white"
+                  className="border border-neutral-200 dark:border-neutral-800 p-2 rounded-lg text-black dark:text-white shrink-0"
                 />
               </div>
 
-              {/* second one  */}
-              <div className=" cursor-pointer flex flex-col gap-4 sm:gap-0 w-full  ">
+              <div className="cursor-pointer flex flex-col gap-2 w-full">
                 <div
-                  className="flex flex-col sm:flex-row  gap-4 sm:items-center sm:justify-between  w-full"
+                  className="flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between w-full"
                   onClick={() => toggleIndex(i)}
                 >
                   <div className="flex items-center gap-2">
                     <div>
                       <div className="flex gap-4 items-center">
                         <p
-                          className={`${gabarito.className} text-xl text-black dark:text-white`}
+                          className={`${gabarito.className} text-xl text-black dark:text-white font-semibold`}
                         >
                           {e.company}
                         </p>
 
                         <IconCircleArrowRight
-                          size={24}
-                          className={`text-gray-500 ${
+                          size={22}
+                          className={`text-gray-500 transition-transform duration-200 ${
                             isOpen ? "rotate-90" : ""
                           }`}
                         />
@@ -76,10 +75,11 @@ export default function Experience() {
                     </div>
                   </div>
 
-                  <div className="flex  place-self-end sm:place-self-start sm:items-center gap-2  ">
+                  <div className="flex place-self-start sm:place-self-auto sm:items-center gap-2">
                     <p
-                      className={`${hanken.className}  text-sm font-medium ${
-                        e.timeframe === "March 2025 - Current"
+                      className={`${hanken.className} text-sm font-medium ${
+                        e.timeframe.includes("Current") ||
+                        e.timeframe.includes("Present")
                           ? "text-green-600"
                           : "text-gray-500"
                       }`}
@@ -89,35 +89,34 @@ export default function Experience() {
                   </div>
                 </div>
 
-                <motion.ul
-                  initial={{
-                    y: 20,
-                    opacity: 0,
-                    filter: "blur(10px)",
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{
+                    opacity: isOpen ? 1 : 0,
+                    height: isOpen ? "auto" : 0,
                   }}
-                  whileInView={{
-                    y: 0,
-                    opacity: 1,
-                    filter: "blur(0px)",
-                  }}
-                  transition={{
-                    duration: 0.15,
-                    delay: 0,
-                    type: "tween",
-                  }}
-                  className={`duration-500 mx-auto w-full  ${
-                    isOpen ? "list-disc flex flex-col gap-4 mt-4" : "hidden"
-                  }`}
+                  transition={{ duration: 0.2 }}
+                  className="overflow-hidden"
                 >
-                  {e.about.map((text: string, j: number) => (
-                    <li
-                      key={j}
-                      className={`${hanken.className} text-sm text-gray-600 dark:text-gray-500`}
-                    >
-                      {text}
-                    </li>
-                  ))}
-                </motion.ul>
+                  <p
+                    className={`${hanken.className} text-sm text-gray-600 dark:text-gray-400 leading-relaxed pt-2`}
+                  >
+                    {e.description}
+                  </p>
+
+                  {e.tech && e.tech.length > 0 && (
+                    <div className="flex flex-wrap gap-2 pt-3">
+                      {e.tech.map((tag, j) => (
+                        <span
+                          key={j}
+                          className={`${hanken.className} text-xs px-2.5 py-1 rounded-md bg-gray-200/70 dark:bg-neutral-800 text-black dark:text-gray-300 font-medium`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
               </div>
             </div>
           );
