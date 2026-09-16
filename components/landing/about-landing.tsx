@@ -114,7 +114,7 @@ export default function AboutLanding() {
             className="flex gap-2  px-4 items-center bg-lightBlue dark:bg-darkBlue text-white dark:text-lightBlue  p-2 w-fit text-sm rounded-lg inset-shadow-sm inset-shadow-white/50  dark:inset-shadow-white/20 "
           >
             <IconHeartHandshake stroke={1} size={18} />
-            <p className={`${hanken.className} font-bold`}>Work with me </p>
+            
           </Link>
 
           <a
