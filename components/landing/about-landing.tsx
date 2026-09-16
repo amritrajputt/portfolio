@@ -100,7 +100,7 @@ export default function AboutLanding() {
       <p
         className={`${hanken.className} text-sm text-gray-500 dark:text-gray-400`}
       >
-        I&apos;m a Full Stack Web Developer with expertise in building scalable
+        I&apos;m a Full Stack Developer with expertise in building scalable
         applications using Next.js, Node.js, PostgreSQL, and Redis. Experienced
         in AI/ML integration with LangChain and RAG pipelines, real-time systems
         with WebSockets, and implementing secure authentication protocols
