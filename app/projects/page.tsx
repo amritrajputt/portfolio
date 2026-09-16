@@ -14,11 +14,10 @@ export default function Projects() {
       </p>
 
       <p className={`${hanken.className} text-gray-500 mt-6 text-sm px-4`}>
-        These are my some prominent works which i listed here . I have done a
-        lot more projects ,some are ongoing & some are on the verge of ending.So
-        if you want to see more projects , you can visit my{" "}
+        These are some of my prominent works. I have more projects in progress,
+        so if you want to see more, you can visit my{" "}
         <Link
-          href={"https://github.com/Kashyap1ankit"}
+          href={"https://github.com/amritrajputt"}
           target="_blank"
           className="text-blue-500 font-bold"
         >

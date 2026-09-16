@@ -38,7 +38,7 @@ export default function HomeProjects() {
       </p>
 
       <div className=" grid grid-cols-1 md:grid-cols-2   gap-6 px-4">
-        {allProjects.slice(0, 4).map((e: dataType, i: number) => {
+        {allProjects.map((e: dataType, i: number) => {
           return (
             <Link
               href={`https://${e.deployed}`}

@@ -1,13 +1,8 @@
 import { DiRedis } from "react-icons/di";
-import { RiBearSmileFill } from "react-icons/ri";
 import {
   IconBrandCss3,
-  IconBrandFramerMotion,
-  IconBrandMongodb,
   IconBrandNextjs,
   IconBrandNodejs,
-  IconBrandReact,
-  IconBrandTailwind,
   IconBrandTypescript,
 } from "@tabler/icons-react";
 
@@ -16,32 +11,19 @@ import {
   SiReact,
   SiExpress,
   SiGit,
-  SiMongoose,
-  SiPrisma,
-  SiRecoil,
-  SiTailwindcss,
-  SiTypescript,
-  SiZod,
   SiSocketdotio,
-  SiNextdns,
-  SiHono,
   SiNextdotjs,
   SiNodedotjs,
   SiDocker,
-  SiMongodb,
   SiPostgresql,
-  SiBootstrap,
-  SiPassport,
-  SiNpm,
-  SiTrpc,
-  SiReactrouter,
-  SiReactquery,
-  SiFramer,
-  SiExpo,
-  SiEjs,
+  SiTypescript,
+  SiPostman,
+  SiLeetcode,
+  SiGeeksforgeeks,
+  SiHashnode,
 } from "react-icons/si";
+import { FaJava, FaHtml5, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import {
-  GitMergeIcon,
   Home04Icon,
   VisualStudioCodeIcon,
 } from "@hugeicons/core-free-icons";
@@ -57,115 +39,56 @@ export const skills = [
     icon: SiTypescript,
   },
   {
-    title: "Node js",
-    icon: SiNodedotjs,
+    title: "Java",
+    icon: FaJava,
   },
-
   {
     title: "React",
     icon: SiReact,
   },
   {
-    title: "React Native",
-    icon: SiReact,
+    title: "Next.js",
+    icon: SiNextdotjs,
   },
   {
-    title: "Expo",
-    icon: SiExpo,
+    title: "Node.js",
+    icon: SiNodedotjs,
   },
   {
     title: "Express.js",
     icon: SiExpress,
   },
   {
-    title: "Nextjs",
-    icon: SiNextdotjs,
-  },
-  {
-    title: "Honojs",
-    icon: SiHono,
-  },
-  {
-    title: "PostgresSQL",
+    title: "PostgreSQL",
     icon: SiPostgresql,
-  },
-  {
-    title: "MongoDB",
-    icon: SiMongodb,
   },
   {
     title: "Redis",
     icon: DiRedis,
   },
   {
-    title: "Websockets",
-    icon: SiSocketdotio,
-  },
-  {
     title: "Docker",
     icon: SiDocker,
   },
   {
-    title: "Tailwind",
-    icon: SiTailwindcss,
-  },
-  {
-    title: "Bootstrap",
-    icon: SiBootstrap,
-  },
-  {
-    title: "React Router",
-    icon: SiReactrouter,
-  },
-  {
-    title: "React Query",
-    icon: SiReactquery,
-  },
-  {
-    title: "Prisma",
-    icon: SiPrisma,
-  },
-  {
-    title: "Mongoose",
-    icon: SiMongoose,
+    title: "WebSockets",
+    icon: SiSocketdotio,
   },
   {
     title: "Git",
     icon: SiGit,
   },
   {
-    title: "Recoil",
-    icon: SiRecoil,
+    title: "HTML",
+    icon: FaHtml5,
   },
   {
-    title: "Zustand",
-    icon: RiBearSmileFill,
+    title: "CSS",
+    icon: IconBrandCss3,
   },
   {
-    title: "Auth.js",
-    icon: SiNextdns,
-  },
-  {
-    title: "Passport.js",
-    icon: SiPassport,
-  },
-
-  {
-    title: "Npm",
-    icon: SiNpm,
-  },
-
-  {
-    title: "Zod",
-    icon: SiZod,
-  },
-  {
-    title: "tRpc",
-    icon: SiTrpc,
-  },
-  {
-    title: "Framer Motion",
-    icon: SiFramer,
+    title: "Postman",
+    icon: SiPostman,
   },
 ];
 
@@ -184,13 +107,6 @@ export const navLinks: navLinksType[] = [
     link: "/projects",
     value: "/projects",
   },
-  {
-    name: "OS",
-    icon: GitMergeIcon,
-    icon2: GitMergeIcon,
-    link: "/contributions",
-    value: "/contributions",
-  },
 ];
 
 export interface navLinksType {
@@ -200,390 +116,92 @@ export interface navLinksType {
   link: string;
   value: tabType;
 }
-export type tabType = "/" | "/projects" | "/contributions";
+export type tabType = "/" | "/projects";
 
 export const allProjects = [
   {
-    name: "JobJunction",
+    name: "PRRabbit",
     description:
-      "Job portal where user can see job postings & can also post one for community if they know.",
-    deployed: "jj.10xdevlab.in",
-    github: "https://github.com/Kashyap1ankit/Jobjunction",
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      SiPostgresql,
-      IconBrandFramerMotion,
-    ],
-    image: "/jj.webp",
-    category: "Product",
-  },
-
-  {
-    name: "Earnkit",
-    description: "Designed & coded landing page for earnkit",
-    deployed: "earnkit.10xdevlab.in",
-    github: "https://github.com/Kashyap1ankit/EarnKit",
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      IconBrandFramerMotion,
-    ],
-    image: "/earnkit.webp",
-    category: "Revamp",
-  },
-  {
-    name: "Yuga",
-    description: "Developed multiple pages ui in the 7-day long freelancing. ",
-    deployed: "www.joinyuga.com/",
-    github: null,
-    tech: [IconBrandNextjs, IconBrandTypescript, IconBrandTailwind],
-    image: "/yuga.webp",
-    category: "Freelancing",
-  },
-
-  {
-    name: "Logofy",
-    description:
-      "Helps to generate professional logos for their company. Describe in few words what you want in the logo and get it as svg",
-    deployed: "logofy.10xdevlab.in",
-    github: null,
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      SiPostgresql,
-      IconBrandFramerMotion,
-    ],
-    image: "/logofy.webp",
-    category: "Product",
-  },
-
-  {
-    name: "Classly",
-    description:
-      "One stop platform to track assignments,student progress and lot.",
-    deployed: "classly.10xdevlab.in/",
-    github: null,
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      SiPostgresql,
-    ],
-    image: "/classly.webp",
+      "An autonomous GitHub App that reviews pull requests using Pinecone-powered RAG and Inngest for async orchestration, posting contextual inline feedback directly on code diffs.",
+    deployed: "pr-rabbit-nu.vercel.app",
+    github: "https://github.com/amritrajputt/PRRabbit",
+    tech: [IconBrandNextjs, IconBrandTypescript, IconBrandNodejs,SiPostgresql, SiDocker],
+    image: "/prrabbit.png",
     category: "Product",
   },
   {
-    name: "Referrush",
-    description: "Designed & coded landing page for earnkit",
-    deployed: "referrush-five.vercel.app/",
-    github: "https://github.com/Kashyap1ankit/referrush",
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      IconBrandFramerMotion,
-    ],
-    image: "/referush.webp",
-    category: "Revamp",
-  },
-
-  {
-    name: "Techtalkies",
+    name: "AuthCraft",
     description:
-      "Platform where user can come & write blogs. If user don't know what to write then they can use Ai to write blogs by giving topic name",
-    deployed: "techtalkies.10xdevlab.in",
-    github: "https://github.com/Kashyap1ankit/Techtalkies",
-    tech: [
-      IconBrandReact,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      SiPostgresql,
-      IconBrandFramerMotion,
-      SiHono,
-    ],
-    image: "/techtalkies.webp",
-    category: "Product",
-  },
-
-  {
-    name: "Waiting List ",
-    description: "Designed & coded waiting list page for doscsmin",
-    deployed: "docsmin.com",
-    github: null,
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      SiPostgresql,
-      IconBrandFramerMotion,
-    ],
-    image: "/docsmin.webp",
-    category: "Revamp",
-  },
-
-  {
-    name: "Tudu",
-    description: "One stop platform to track attendance, tasks.",
-    deployed: "tudu-mu.vercel.app",
-    github: null,
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      SiPostgresql,
-    ],
-    image: "/tudu.webp",
-    category: "Product",
-  },
-
-  {
-    name: "DevTerminus",
-    description:
-      "Get to know about your skill set & how much are your replacable from Ai",
-    deployed: "dev-terminus.10xdevlab.in/",
-    github: "https://github.com/Kashyap1ankit/dev-terminus",
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      SiPostgresql,
-      IconBrandFramerMotion,
-    ],
-    image: "/devterminus.webp",
-    category: "Product",
-  },
-
-  {
-    name: "Docsmin Landing",
-    description:
-      "Unresponsive landing page designed & coded for a file sharing platform",
-    deployed: "docsmin-landing.vercel.app/",
-    github: "https://github.com/Kashyap1ankit/docsmin-landing",
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      IconBrandFramerMotion,
-    ],
-    image: "/docsmin-landing.webp",
-    category: "Revamp",
-  },
-
-  {
-    name: "Gh-Activity-Card",
-    description:
-      "Npm package that helps developers to showcase their Github contribution in last 1 year. Developed backend for this & integrated frontend",
-    deployed: "npmjs.com/package/gh-activity-card",
-    github: "https://github.com/Kashyap1ankit/gh-activity-card",
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      IconBrandNodejs,
-      SiExpress,
-    ],
-    image: "/gh.webp",
-    category: "Product",
-  },
-
-  {
-    name: "Puch Ai",
-    description:
-      "Implemented a cleaner UI, enhanced content structure, and improved user experience by highlighting core features, user benefits, and call-to-action elements. The new layout better communicates the products value proposition and aligns with current design trends, resulting in a more engaging and conversion-optimized landing page.",
-    deployed: "puch.10xdevlab.in",
-    github: "https://github.com/Kashyap1ankit/pai-revamp",
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      IconBrandFramerMotion,
-    ],
-    image: "/puch.webp",
-    category: "Revamp",
-  },
-
-  {
-    name: "Vidstash",
-    description:
-      "Created the ui & authentication part of a video uploading platform where user can come .. create accounts and then upload videos and can share it to friends either publically or privately",
-    deployed: "vidstash.10xdevlab.in/",
-    github: "https://github.com/Kashyap1ankit/vidstash",
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      SiPostgresql,
-    ],
-    image: "/vidstash.webp",
-    category: "Revamp",
-  },
-
-  {
-    name: "TechKareer Revamp",
-    description:
-      "Implemented a cleaner UI, enhanced content structure, and improved user experience by highlighting core features, user benefits, and call-to-action elements. The new layout better communicates the products value proposition and aligns with current design trends, resulting in a more engaging and conversion-optimized landing page.",
-    deployed: "techkareer.10xdevlab.in",
-    github: "https://github.com/Kashyap1ankit/techkareer-revamp",
-    tech: [
-      IconBrandNextjs,
-      IconBrandTypescript,
-      IconBrandTailwind,
-      IconBrandFramerMotion,
-    ],
-    image: "/techkareer.webp",
-    category: "Revamp",
-  },
-  {
-    name: "PayUsVia",
-    description:
-      "Platform where user signup and they can do transactions with the existing user on website.",
-    deployed: "paytm-frontend-ankits-projects-5c12be11.vercel.app",
-    github: "https://github.com/Kashyap1ankit/paytm-frontend",
-    tech: [
-      IconBrandReact,
-      IconBrandTailwind,
-      IconBrandNodejs,
-      SiExpress,
-      IconBrandMongodb,
-    ],
-    image: "/paytm.webp",
+      "A spec-compliant OpenID Connect (OIDC) identity provider built with Node.js and PostgreSQL, featuring Authorization Code Flow, PKCE, RS256 JWT signing, and token rotation.",
+    deployed: "authcraft-oidc.onrender.com/login",
+    github: "https://github.com/amritrajputt/OIDC-provider",
+    tech: [IconBrandNodejs, SiExpress, SiPostgresql, SiDocker],
+    image: "/authcraft.png",
     category: "Product",
   },
   {
-    name: "Airbnb Clone",
+    name: "Muzzix",
     description:
-      "A hotel booking wesbite similar to airbnb. User can signup and see the listings and also see & give reviews on experience",
-    deployed: null,
-    github: "https://github.com/Kashyap1ankit/Airbnb",
-    tech: [SiExpress, IconBrandCss3, IconBrandNodejs, IconBrandMongodb, SiEjs],
-    image: "/airbnb.webp",
+      "A real-time collaborative music queue room with NTP-style synchronized playback, Redis Sorted Sets for sub-millisecond voting, and live WebSocket broadcasts.",
+    deployed: "muzzix.vercel.app",
+    github:
+      "https://github.com/amritrajputt/Muzzix---Collaborative-Music-Queue-App",
+    tech: [IconBrandNextjs, IconBrandTypescript, DiRedis, SiSocketdotio],
+    image: "/muzzix.png",
     category: "Product",
   },
-];
-
-export const contriubutionData = [
   {
-    organisation: "100xdev",
-    logo: "https://appx-wsb-gcp-mcdn.akamai.net.in/subject/2023-01-17-0.3698267942851394.jpg",
-    organisation_github: "https://github.com/code100x",
-    contribution: [
-      {
-        title: "Created the notification system & web app ",
-        link: "https://github.com/code100x/job-board/pull/544",
-      },
-      {
-        title: "Fixed the overall performace of the website",
-        link: "https://github.com/code100x/job-board/pull/557",
-      },
-      {
-        title: "Created the bookmark functionality for saving job postings",
-        link: "https://github.com/code100x/job-board/pull/518",
-      },
-      {
-        title: "Added the checks before deleting account ensuring security",
-        link: "https://github.com/code100x/job-board/pull/513",
-      },
-      {
-        title: "Fixed Bug for account deletion",
-        link: "https://github.com/code100x/job-board/pull/508",
-      },
-    ],
+    name: "Resumio",
+    description:
+      "An AI resume builder that transforms structured prompts into pixel-perfect LaTeX PDFs compiled in sandboxed Docker containers on AWS EC2, delivering 15-second generation.",
+    deployed: "resumiobyamrit.vercel.app",
+    github: "https://github.com/amritrajputt/AI-Resume-Builder",
+    tech: [IconBrandNextjs, IconBrandTypescript, SiDocker, IconBrandNodejs],
+    image: "/resumio.png",
+    category: "Product",
   },
   {
-    organisation: "Sanity",
-    logo: "https://www.toornify.com/sanity_esports_logo.jpg",
-    organisation_github: "https://github.com/dinxsh/sanity",
-    contribution: [
-      {
-        title: "Revamped the contact page",
-        link: "https://github.com/dinxsh/sanity/pull/156",
-      },
-      {
-        title: "Created the notification Dialog ",
-        link: "https://github.com/dinxsh/sanity/pull/136",
-      },
-      {
-        title: "Fixed dependency issue in codebase",
-        link: "https://github.com/dinxsh/sanity/pull/134",
-      },
-      {
-        title: "Revamped the teams page & added search functionality",
-        link: "https://github.com/dinxsh/sanity/pull/150",
-      },
-      {
-        title: "Added husky & pretteir for formatting code in development",
-        link: "https://github.com/dinxsh/sanity/pull/151",
-      },
-      {
-        title: "Added the backend logic for contact email",
-        link: "https://github.com/dinxsh/sanity/pull/159",
-      },
-      {
-        title: "Ensured Authorization on tournament & bracket creation",
-        link: "https://github.com/dinxsh/sanity/pull/186",
-      },
-      {
-        title: "Fixed the responsiveness & few bugs on landing page",
-        link: "https://github.com/dinxsh/sanity/pull/182",
-      },
-      {
-        title: "Fixed the navbar scroll white line issue",
-        link: "https://github.com/dinxsh/sanity/pull/172",
-      },
-      {
-        title: "Changed the join community btn to signup button",
-        link: "https://github.com/dinxsh/sanity/pull/171",
-      },
-      {
-        title: "Changed the icon & removed the tick/cross button",
-        link: "https://github.com/dinxsh/sanity/pull/170",
-      },
-      {
-        title: "Increased the accesibility from 83 to 94",
-        link: "https://github.com/dinxsh/sanity/pull/163",
-      },
-    ],
+    name: "Prepr AI",
+    description:
+      "A voice-first AI mock interview agent powered by OpenAI's Realtime Voice API and WebRTC, dynamically tailoring technical questions to your resume and target job role.",
+    deployed: "prepr-ai-seven.vercel.app",
+    github: "https://github.com/amritrajputt/prepr",
+    tech: [IconBrandNextjs, IconBrandTypescript, SiSocketdotio, IconBrandNodejs],
+    image: "/prepr.png",
+    category: "Product",
   },
 ];
 
 export const experienceData = [
   {
-    company: "Freelancing",
-    role: "Fullstack Developer",
-    timeframe: "March 2025 - Current",
-    about: [
-      "Delivered end-to-end freelance projects for clients, building responsive web and mobile applications using Next.js and RN.",
-      "Converted Figma designs into polished, high-performance user interfaces optimized for all devices",
-      "Integrated scalable backends with MongoDB, Prisma, and AWS S3 for data management and media storage",
-      "Implemented secure authentication and user management",
-    ],
+    company: "Pinnacle Labs",
+    role: "Web Development Intern",
+    timeframe: "June 2026 - July 2026",
+    description:
+      "Engineered an end-to-end event management platform using Next.js and TypeScript, empowering organizers to create, manage, and publish events seamlessly. Solved critical booking race conditions by implementing PostgreSQL row-level locking and idempotent API architecture to guarantee zero double-bookings under concurrent traffic. Integrated Drizzle ORM for atomic transactional workflows and automated background email notifications for invitations and reminders.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "REST APIs"],
+  },
+];
 
-    image: "/stealth.jpeg",
+export const socialsData = [
+  {
+    link: "https://github.com/amritrajputt",
+    icon: FaGithub,
   },
   {
-    company: "SparkStrand",
-    role: "Fullstack Intern",
-    timeframe: "July 2024 - Oct 2024",
-    about: [
-      "Collaborated in a team of 7 to develop a full-stack web application using Next.js and MongoDB",
-      "Utilized tech like Prisma, AWS S3, and Clerk to create multiple API routes",
-      "Transformed pixel-perfect Figma designs into responsive, high-quality web pages",
-    ],
-    image: "/sparkstand.jpg",
+    link: "https://www.linkedin.com/in/amritxrajput/",
+    icon: FaLinkedinIn,
   },
   {
-    company: "Edtech Startup",
-    role: "TA Intern",
-    timeframe: "Nov 2023 - Mar 2024",
-    about: [
-      "Resolved over 1,050 MERN stack queries for students, providing in-depth coding support",
-      "Assisted more than 5,000 students throughout their coding journeys",
-      "Achieved a 4.97/5 rating during my internship",
-    ],
-    image: "/stealth.jpeg",
+    link: "https://leetcode.com/u/amrit_2004/",
+    icon: SiLeetcode,
+  },
+  {
+    link: "https://www.geeksforgeeks.org/profile/amrit_xrajput",
+    icon: SiGeeksforgeeks,
+  },
+  {
+    link: "https://hashnode.com/@amritxrajput",
+    icon: SiHashnode,
   },
 ];
